@@ -1,0 +1,26 @@
+.dark {
+    background-color: black;
+    color: white;
+}
+
+.light {
+    background-color: white;
+    color:black
+}
+@media screen and (max-width: 1919px) {
+    .header {
+        width: 1376px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .header {
+        width: 1024px;
+    }
+}
+
+@media screen and (max-width: 1056px) {
+    .header {
+        width: calc(100% - 2rem);
+    }
+}
