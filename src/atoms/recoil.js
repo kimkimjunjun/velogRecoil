@@ -8,4 +8,14 @@ export const darkModeState = atom({
 export const isModal = atom({
   key: 'modal',
   default: false,
-})
+});
+
+export const isModalRef = atom({
+  key: 'modalRef',
+  default: null,
+});
+
+export const isRegi = atom({
+  key: 'Regi',
+  default: false,
+});
