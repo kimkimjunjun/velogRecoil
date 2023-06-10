@@ -4,6 +4,7 @@ import { RecoilRoot, useRecoilValue } from 'recoil';
 import { darkModeState } from './atoms/recoil';
 import DarkModeToggle from './components/DarkModeToggle';
 import Mainpg from './page/Mainpg';
+import Searchpg from './page/Searchpg';
 
 const App = () => {
 
@@ -12,6 +13,7 @@ const App = () => {
       <BrowserRouter>
           <Routes>
             <Route path='/' element={<Mainpg />} />
+            <Route path='/search' element={<Searchpg />} />
           </Routes>
       </BrowserRouter>
     </div>
