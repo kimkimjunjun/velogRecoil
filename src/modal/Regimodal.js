@@ -3,7 +3,7 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import { isModal, isRegi } from "../atoms/recoil";
 
 const RegiModal = () => {
-    const isRegi = useRecoilValue(isRegi);
+    const isRegis = useRecoilValue(isRegi);
     const [isOpen, setIsOpen] = useRecoilState(isModal);
 
 
@@ -13,7 +13,7 @@ const RegiModal = () => {
 
     return (
     <div>
-    {isRegi && (<div className='flex absolute top-[20%] left-[35%] justify-center w-[606px] h-[530px] shadow-md z-10'>
+    {isRegis && (<div className='flex absolute top-[20%] left-[35%] justify-center w-[606px] h-[530px] shadow-md z-100'>
     <div className='bg-[#F8F9FA] w-[246px] flex-col justify-center'>
         <img className="w-[100%] block justify-center items-center pt-[60%]" src="https://static.velog.io/static/media/undraw_joyride_hnno.fae6b95e.svg" alt="welcome" />
         <div className='text-xl mt-5 text-[#495057] text-center font-bold'>환영합니다!</div>

@@ -1,11 +1,12 @@
 import { useRecoilState, useRecoilValue } from "recoil";
-import { isModal } from "../atoms/recoil";
+import { darkModeState, isModal, isRegi } from "../atoms/recoil";
 import RegiModal from "./Regimodal";
 import BaseModal from "./Basemodal";
 
 const LoginModal = () => {
-    const [isRegi, setIsRegi] = useRecoilState(isRegi);
+    const [Regi, setRegi] = useRecoilState(isRegi);
     const [isOpen, setIsOpen] = useRecoilState(isModal);
+    const theme = useRecoilValue(darkModeState);
 
 
     const closeModal = () => {
@@ -13,11 +14,11 @@ const LoginModal = () => {
     }
 
     return (<div className='flex absolute top-[20%] left-[35%] justify-center w-[606px] h-[530px] shadow-md z-10'>
-        <div className='bg-[#F8F9FA] w-[246px] flex-col justify-center'>
+        <div className={`${theme === 'light' ? 'bg-[#F8F9FA]' : 'bg-[#1E1E1E]'} w-[246px] flex-col justify-center`}>
             <img className="w-[100%] block justify-center items-center pt-[60%]" src="https://static.velog.io/static/media/undraw_joyride_hnno.fae6b95e.svg" alt="welcome" />
-            <div className='text-xl mt-5 text-[#495057] text-center font-bold'>환영합니다!</div>
+            <div className={`text-xl mt-5 ${theme === 'light' ? 'text-[#495057]' : 'text-[#D9D9D9]'} text-center font-bold`}>환영합니다!</div>
         </div>
-        <div className="w-[390px] p-5 bg-white ">
+        <div className={`w-[390px] p-5 ${theme === 'light' ? 'bg-white' : 'bg-[#121212]'} `}>
             <div className=" text-right">
                 <svg
                     stroke="currentColor"
@@ -40,8 +41,8 @@ const LoginModal = () => {
                 <section>
                     <h4 className="mt-4 mb-4 text-[#868E96]">이메일로 로그인</h4>
                     <form className='w-[100%] flex h-12'>
-                        <input className="flex-1 p-4 bg-white border border-solid border-gray-600 rounded-l-md text-base text-gray-800 focus:outline-none" placeholder='이메일을 입력하세요.' type='text' />
-                        <button type='submit'>로그인</button>
+                        <input className={`flex-1 p-4 ${theme === 'lgiht' ? 'bg-[#ffffff]' : 'bg-[#1E1E1E]'} border border-solid border-gray-600 rounded-l-md text-base text-gray-800 focus:outline-none`} placeholder='이메일을 입력하세요.' type='text' />
+                        <button className={`text-[1rem] font-bold w-[6rem] cursor-pointer ${theme === 'light' ? 'bg-[#12B886]' : 'bg-[#96F2D7]'}`} type='submit'>로그인</button>
                     </form>
                 </section>
                 <section>
@@ -60,10 +61,8 @@ const LoginModal = () => {
                 </section>
                 <div className='pt-[40%]'>
                     <span>아직 회원이 아니신가요?</span>
-                    <div class=" inline-block font-bold text-[#12B886] cursor-pointer" tabindex="7" data-testid="switchmode" onClick={() => setIsRegi(true)}>회원가입</div>
-                    <BaseModal>
-                        <RegiModal />
-                    </BaseModal>
+                    <div class=" inline-block font-bold text-[#12B886] cursor-pointer" tabindex="7" data-testid="switchmode" onClick={() => setRegi(true)}>회원가입</div>
+                    
                 </div>
             </div>
         </div>
