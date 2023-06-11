@@ -18,7 +18,6 @@ const Header = ({ children }) => {
                 <DarkModeToggle />
                 <SearchButton />
                 <LoginButton />
-
             </div>
             <div>
                 {children}

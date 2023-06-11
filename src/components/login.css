@@ -29,3 +29,12 @@
 .Loginb:hover {
     background-color: rgba(255,255,255,0.7);
 }
+
+
+#myDiv {
+    border: 1px solid #999999;
+}
+
+#myInput:focus + #myDiv {
+    border: 1px solid #0000ff !important;
+}
