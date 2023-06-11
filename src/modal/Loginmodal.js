@@ -62,7 +62,7 @@ const LoginModal = () => {
                 </section>
                 <div className='pt-[40%] flex'>
                     <span className="ml-auto">아직 회원이 아니신가요?</span>
-                    <div className=" inline-block font-bold text-[#12B886] cursor-pointer" tabindex="7" data-testid="switchmode" onClick={() => setRegi(true)}>회원가입</div>
+                    <div className=" inline-block font-bold text-[#12B886] cursor-pointer" tabindex="7" data-testid="switchmode">회원가입</div>
                 </div>
             </div>
         </div>
