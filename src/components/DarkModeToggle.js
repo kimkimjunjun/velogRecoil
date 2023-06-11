@@ -27,7 +27,7 @@ const DarkModeToggle = () => {
     // theme 값이 변경되면 body 요소의 클래스명도 업데이트
     if (theme === 'dark') {
       document.body.style.transition = 'background-color 0.2s ease-in-out';
-      document.body.style.backgroundColor = '#1e1e1e';
+      document.body.style.backgroundColor = '#121212';
 
     } else {
       document.body.style.transition = 'background-color 0.2s ease-in-out';

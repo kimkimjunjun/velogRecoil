@@ -19,7 +19,7 @@ function Posting() {
                         <p className='break-words text-[0.875rem] h-[3.9rem] text-ellipsis'>11분 -> 1분내외? 어케했는교</p>
                     </div>
                 </a>
-                <div className='text-[0.75rem]'>
+                <div className='text-[0.75rem] text-[#868E96]'>
                     <span>2023년 5월 28일</span>
                     <span class="ml-1 mr-1">·</span>
                     <span>30개의 댓글</span>
