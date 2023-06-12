@@ -19,3 +19,8 @@ export const isRegi = atom({
   key: 'Regi',
   default: false,
 });
+
+export const isBase = atom({
+  key: 'Base',
+  default: false,
+});

@@ -1,15 +1,21 @@
 import { useRecoilState, useRecoilValue } from "recoil";
-import { darkModeState, isModal, isRegi } from "../atoms/recoil";
+import { darkModeState, isBase, isModal, isRegi } from "../atoms/recoil";
 import RegiModal from "./Regimodal";
 import BaseModal from "./Basemodal";
 
 const LoginModal = () => {
     const [Regi, setRegi] = useRecoilState(isRegi);
+    const [isBaseOpen, setIsBaseOpen] = useRecoilState(isBase);
     const [isOpen, setIsOpen] = useRecoilState(isModal);
     const theme = useRecoilValue(darkModeState);
 
-
     const closeModal = () => {
+        setIsOpen(false);
+        setIsBaseOpen(false);
+    };
+
+    const RegiModalOpen = () => {
+        setRegi(true);
         setIsOpen(false);
     }
 
@@ -62,11 +68,14 @@ const LoginModal = () => {
                 </section>
                 <div className='pt-[40%] flex'>
                     <span className="ml-auto">아직 회원이 아니신가요?</span>
-                    <div className=" inline-block font-bold text-[#12B886] cursor-pointer" tabindex="7" data-testid="switchmode">회원가입</div>
+                    <div className=" inline-block font-bold text-[#12B886] cursor-pointer" tabindex="7" data-testid="switchmode" onClick={RegiModalOpen}>회원가입</div>
+                    <RegiModal/>
                 </div>
             </div>
         </div>
-    </div>);
+    </div>
+
+    );
 }
 
 export default LoginModal;
