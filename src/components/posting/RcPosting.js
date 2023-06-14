@@ -6,10 +6,10 @@ function RcPosting() {
     const theme = useRecoilValue(darkModeState);
 
     return (
-        <div className={`w-[20rem] rounded-[4px] shadow-md m-5`}>
+        <div className={`w-[20rem] rounded-[4px] shadow-md m-5 hover:-translate-y-2 duration-300`}>
             <a className='block text-inherit no-underline hover:animate-moveUp' href='#'>
-                <div className='w-full relative hover:animate-moveUp'>
-                    <img className='top-0 left-0 w-full h-[170px] object-cover block' src='https://velog.velcdn.com/images/oilater/post/282e929a-0258-486a-b580-b915afd5e9a0/image.png' alt=''></img>
+                <div className='w-full relative'>
+                    <img className='top-0 left-0 w-full h-[170px] object-cover block rounded-t-md' src='https://velog.velcdn.com/images/oilater/post/282e929a-0258-486a-b580-b915afd5e9a0/image.png' alt=''></img>
                 </div>
             </a>
             <div className={`p-4 flex-1 ${theme === 'light' ? 'bg-white' : 'bg-[#1E1E1E]'}`}>

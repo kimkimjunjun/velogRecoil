@@ -20,7 +20,7 @@ const LoginModal = () => {
     }
 
 
-    return (<div className='flex absolute top-[20%] left-[35%] justify-center w-[606px] h-[530px] shadow-lg z-10'>
+    return (<div className="flex">
         <div className={`${theme === 'light' ? 'bg-[#F8F9FA]' : 'bg-[#1E1E1E]'} w-[200px] flex-col justify-center`}>
             <img className="w-[100%] block justify-center items-center pt-[80%]" src="https://static.velog.io/static/media/undraw_joyride_hnno.fae6b95e.svg" alt="welcome" />
             <div className={`text-3xl mt-5 ${theme === 'light' ? 'text-[#495057]' : 'text-[#D9D9D9]'} text-center font-bold`}>환영합니다!</div>
@@ -69,10 +69,10 @@ const LoginModal = () => {
                 <div className='pt-[40%] flex'>
                     <span className="ml-auto">아직 회원이 아니신가요?</span>
                     <div className=" inline-block font-bold text-[#12B886] cursor-pointer" tabindex="7" data-testid="switchmode" onClick={RegiModalOpen}>회원가입</div>
-                    <RegiModal/>
                 </div>
+                
             </div>
-        </div>
+        </div>{Regi && <RegiModal/>}
     </div>
 
     );
