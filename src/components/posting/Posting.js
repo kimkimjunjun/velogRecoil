@@ -7,8 +7,8 @@ function Posting() {
 
     return (
         <div className={`w-[20rem] rounded-[4px] shadow-md m-5 hover:-translate-y-2 duration-300 `}>
-            <a className='block text-inherit no-underline hover:animate-moveUp' href='#'>
-                <div className='w-full relative hover:animate-moveUp'>
+            <a className='block text-inherit no-underline' href='#'>
+                <div className='w-full relative'>
                     <img className='top-0 left-0 w-full h-[170px] object-cover block rounded-t-md' src='https://velog.velcdn.com/images/baby_dev/post/be5565ad-7362-412f-acdf-b22f1f3f276f/image.png' alt=''></img>
                 </div>
             </a>

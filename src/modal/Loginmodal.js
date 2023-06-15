@@ -2,6 +2,7 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import { darkModeState, isBase, isModal, isRegi } from "../atoms/recoil";
 import RegiModal from "./Regimodal";
 import BaseModal from "./Basemodal";
+import { Link } from "react-router-dom";
 
 const LoginModal = () => {
     const [Regi, setRegi] = useRecoilState(isRegi);
@@ -70,9 +71,9 @@ const LoginModal = () => {
                     <span className="ml-auto">아직 회원이 아니신가요?</span>
                     <div className=" inline-block font-bold text-[#12B886] cursor-pointer" tabindex="7" data-testid="switchmode" onClick={RegiModalOpen}>회원가입</div>
                 </div>
-                
+
             </div>
-        </div>{Regi && <RegiModal/>}
+        </div>{Regi && <RegiModal />}
     </div>
 
     );
