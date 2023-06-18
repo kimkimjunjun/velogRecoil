@@ -20,6 +20,8 @@ function Recentpg() {
           <RcPosting />
           <RcPosting />
           <RcPosting />
+          <RcPosting />
+          <RcPosting />
         </BasePost>
         </Header>
     </div>
