@@ -20,7 +20,7 @@ function RcPosting() {
                     </div>
                 </a>
                 <div className='text-[0.75rem] text-[#868E96] mt-5'>
-                    <span>약 2시간 전</span>
+                    <span>약 1시간 전</span>
                     <span class="ml-1 mr-1">·</span>
                     <span>0개의 댓글</span>
                 </div>
