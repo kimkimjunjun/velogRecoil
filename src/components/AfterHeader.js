@@ -7,6 +7,7 @@ import '../App.css';
 import LoginButton from './LoginButton';
 import SearchButton from './SearchButton';
 import Logoh from './Logoh';
+import Newwrite from './after/Newwrite';
 
 const AfterHeader = ({ children }) => {
     const theme = useRecoilValue(darkModeState);
@@ -17,6 +18,7 @@ const AfterHeader = ({ children }) => {
                 <Logoh />
                 <DarkModeToggle />
                 <SearchButton />
+                <Newwrite/>
             </div>
             <div>
                 {children}

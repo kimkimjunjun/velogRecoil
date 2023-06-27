@@ -25,8 +25,8 @@ const LoginModal = () => {
         setIsOpen(false);
     }
 
-    const handleLogin = async () => {
-
+    const handleLogin = async (event) => {
+        event.preventDefault();
 
         const testUser = {
             userName: 'admin',
@@ -37,13 +37,13 @@ const LoginModal = () => {
             setIsLoggedIn(true);
         } else {
             alert('failed.');
+            
         }
 
         try {
             const userData = await login(email, password);
             setIsLoggedIn(true);
-            
-            console.log(userData);
+            console.log(isLoggedInState);
         } catch (error) {
             console.error(error);
         }
