@@ -1,12 +1,14 @@
 import React, { Children } from 'react';
 import { useRecoilValue } from 'recoil';
-import { darkModeState } from '../atoms/recoil';
-import DarkModeToggle from './DarkModeToggle';
-import '../page/darkmode.css';
-import '../App.css';
-import LoginButton from './LoginButton';
-import SearchButton from './SearchButton';
-import Logoh from './Logoh';
+import { darkModeState } from '../../atoms/recoil';
+import DarkModeToggle from '../DarkModeToggle';
+import '../../page/darkmode.css';
+import '../../App.css';
+import LoginButton from '../LoginButton';
+import SearchButton from '../SearchButton';
+import Logoh from '../Logoh';
+import Newwrite from './Newwrite';
+import Profile from './Profile';
 
 const AfterHeader = ({ children }) => {
     const theme = useRecoilValue(darkModeState);
@@ -17,6 +19,8 @@ const AfterHeader = ({ children }) => {
                 <Logoh />
                 <DarkModeToggle />
                 <SearchButton />
+                <Newwrite/>
+                <Profile/>
             </div>
             <div>
                 {children}

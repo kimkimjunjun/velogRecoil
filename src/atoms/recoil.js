@@ -24,3 +24,8 @@ export const isBase = atom({
   key: 'Base',
   default: false,
 });
+
+export const isLoggedInState = atom({
+  key: 'isLoggedInState',
+  default: false,
+});
