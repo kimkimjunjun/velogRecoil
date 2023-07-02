@@ -8,6 +8,8 @@ import Searchpg from './page/Searchpg';
 import Recentpg from './page/Recentpg';
 import Afterpg from './page/Loginpg/Afterpg';
 import { isLoggedInState } from './atoms/recoil';
+import Searchpga from './page/Loginpg/Searchpga';
+import AfterRecent from './page/Loginpg/AfterRecent';
 
 const App = () => {
   const isLoggedIn = useRecoilValue(isLoggedInState);
@@ -17,8 +19,8 @@ const App = () => {
       <BrowserRouter>
           <Routes>
             <Route path='/' element={isLoggedIn ? <Afterpg/> : <Mainpg />} />
-            <Route path='/search' element={<Searchpg />} />
-            <Route path='/recent' element={<Recentpg />} />
+            <Route path='/search' element={isLoggedIn ? <Searchpga/> : <Searchpg />} />
+            <Route path='/recent' element={isLoggedIn ? <AfterRecent/> : <Recentpg />} />
           </Routes>
       </BrowserRouter>
     </div>

@@ -29,8 +29,8 @@ const LoginModal = () => {
         event.preventDefault();
 
         const testUser = {
-            userName: 'admin',
-            password: 'adminpw',
+            userName: '1',
+            password: '1',
         };
 
         if (email === testUser.userName && password === testUser.password) {
