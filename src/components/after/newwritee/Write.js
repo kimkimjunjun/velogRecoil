@@ -77,7 +77,7 @@ function Write() {
                             </div>
                             <div className='pt-4 pl-12 pr-12'>
                                 <div className='text-black text-[1.125rem] flex flex-wrap'>
-                                    <input placeholder='당신의 이야기를 적어보세요...' className={`inline-flex outline-none cursor-text text-[1.125rem] mb-3 min-w-[40rem] border-none text-[#212529] ${theme === 'light' ? 'bg-white' : 'bg-[#121212]'}`}></input>
+                                    <input placeholder='당신의 이야기를 적어보세요...' className={`inline-flex outline-none cursor-text text-[1.125rem] mb-3 min-w-[40rem] border-none ${theme === 'light' ? 'bg-white text-[#212529]' : 'bg-[#121212] text-white'}`}></input>
                                     <div className='block w-[100%] text-[#495057] transition-all duration-125 ease-in'></div>
                                 </div>
                             </div>
@@ -85,7 +85,7 @@ function Write() {
                     </div>
                     <div className={`w-[975px] h-16 shadow-md fixed bottom-0 flex ${theme === 'light' ? 'bg-white' : 'bg-[#2e2e2e]'}`} style={{ boxShadow: 'rgba(0,0,0,0.2) 0px 0px 8px' }}>
                         <Link to='/'>
-                            <button className={`text-[1.25rem] w-[8rem] h-10 m-3 items-center flex ${theme === 'light' ? 'hover:bg-[#E9ECEF]}' : 'hover:bg-[#3e3e3e]'}`} onClick={() => setIsLoggedIn(true)}><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1.4em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg>나가기</button>
+                            <button className={`text-[1.25rem] w-[8rem] h-10 m-3 items-center flex ${theme === 'light' ? 'hover:bg-[#E9ECEF]' : 'hover:bg-[#3e3e3e]'}`} onClick={() => setIsLoggedIn(true)}><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1.4em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg>나가기</button>
                         </Link>
                         <div className='ml-auto p-3'>
                             <button className={`text-[#12B886] text-[1.25rem] mr-5 w-[7rem] h-10 rounded-sm font-extrabold ${theme === 'light' ? 'hover:bg-[#E9ECEF]' : 'hover:bg-[#3e3e3e]'}`}>임시저장</button>
