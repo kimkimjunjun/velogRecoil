@@ -28,6 +28,10 @@ function Afterpg() {
           <Posting />
           <Posting />
           <Posting />
+          <Posting />
+          <Posting />
+          <Posting />
+          <Posting />
         </BasePost>
       </AfterHeader>
     </div>

@@ -33,7 +33,7 @@ function BaseModal({ children }) {
                 <div className={`fixed top-0 left-0 w-[100%] h-[100%] ${theme === 'light' ? 'bg-[rgba(249,249,249,0.85)]' : 'bg-[rgba(0,0,0,0.5)]'} z-10 `} />
             )}
             {(isOpen || Regi) && (
-                <div className='flex absolute top-[20%] left-[35%] justify-center w-[606px] h-[530px] shadow-lg z-10'>
+                <div className='flex absolute top-[20%] left-[35%] justify-center w-[606px] h-[530px] shadow-lg z-10 '>
                     {children}
                 </div>
             )}

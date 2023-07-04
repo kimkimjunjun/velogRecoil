@@ -33,6 +33,10 @@ const Mainpg = () => {
           <Posting />
           <Posting />
           <Posting />
+          <Posting />
+          <Posting />
+          <Posting />
+          <Posting />
         </BasePost>
       </Header>
     </div>
